@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --left-bg-color: #437;
+    --right-bg-color: #477;
+    --hover-width: 75%;
+    --other-width: 25%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    /* based on display */
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #333, #777)
+}
+
+h1 {
+    font-size: 4rem;
+    color: white;
+    position: absolute;
+    
+    /* put the left side of text in the middle */
+    left: 50%;
+    /* to put the middle of text in the middle  */
+    transform: translateX(-50%);
+    top: 30%;
+    /* prevent line changing of text */
+    white-space: nowrap;
+}
+
+.btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    color: white;
+    border: white solid 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    /* to remove underline of link */
+    text-decoration: none;
+
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    
+    /* to put text in the middle and center */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.split.left .btn:hover {
+    background-color: var(--left-bg-color);
+    border-color: var(--left-bg-color);
+    opacity: 1;
+}
+
+.split.right .btn:hover {
+    background-color: var(--right-bg-color);
+    border-color: var(--right-bg-color);
+    opacity: 1;
+}
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+
+    transition: width 1s ease;
+}
+
+/* both of the above and below work*/
+/* .split.left,
+.split.right,
+.split.left::before,
+.split.right::before {
+    transition: all 1s ease-in-out;
+} */
+
+.split.left {
+    left: 0;
+    background: url(images/portfolioSlide3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.left::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--left-bg-color);
+    opacity: 0.5;
+}
+
+.split.right {
+    right: 0;
+    background: url(images/portfolioSlide1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.right::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--right-bg-color);
+    opacity: 0.5;
+}
+
+.hover-left .left {
+    width: var(--hover-width);
+}
+
+.hover-left .right {
+    width: var(--other-width);
+}
+
+.hover-right .left {
+    width: var(--other-width);
+}
+
+.hover-right .right {
+    width: var(--hover-width);
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .btn {
+        width: 100px;
+        font-size: 10px;
+    }
+}
