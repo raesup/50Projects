@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(180deg, #333, #777);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    /* horizontally center */
+    align-items: center;
+
+    /* vertically center */
+    justify-content: center;
+
+    /* based on display */
+    height: auto;
+    color: white;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin: 10px;
+}
+
+.box {
+    background-color: azure;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 15px;
+
+    /* The values go in this order: offset-x, offset-y, blur-radius, spread-radius and color. */
+    box-shadow: 2px 4px 5px rgba(255,255,255,0.5);
+
+    transform: translateX(400%);
+    transition: transform 0.5s ease;
+}
+
+.box:nth-of-type(even) {
+    transform: translateX(-400%);
+}
+
+.box.show {
+    transform: translateX(0);
+}
