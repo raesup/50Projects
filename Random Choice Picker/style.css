@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(180deg, #333, #777);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  /* horizontally center */
+  align-items: center;
+
+  /* vertically center */
+  justify-content: center;
+
+  /* based on display */
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+h3 {
+  color: white;
+  margin: 10px 0 20px;
+  text-align: center;
+}
+
+.container {
+  width: 500px;
+}
+
+#textarea {
+  border: none;
+  display: block;
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  margin: 0 0 20px;
+}
+
+.tag {
+  background-color: white;
+  border-radius: 50px;
+  color: #333;
+  padding: 10px 20px;
+  margin: 0 5px 10px 0;
+  font-size: 14px;
+
+  /* to make it be displayed multiple lines when it overs the size */
+  display: inline-block;
+}
+
+.tag.highlight {
+  background-color: aqua;
+}
