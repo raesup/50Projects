@@ -36,8 +36,8 @@ function updateBigCup(i) {
   percentage.style.height = percentageValue;
 
   if (i === 7) {
-    remained.style.visibility = "hidden";
     remained.style.height = 0;
+    remained.style.visibility = "hidden";
   } else {
     remained.style.visibility = "visible";
   }
