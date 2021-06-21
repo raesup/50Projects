@@ -19,3 +19,7 @@
 5. Blurry Loading
 
 ![Blurry Loading](https://user-images.githubusercontent.com/78226946/122662074-7628bb80-d14d-11eb-8041-bb62961d051e.gif)
+
+6. Scroll Animation
+
+![Scroll Animation](https://user-images.githubusercontent.com/78226946/122816354-d9bd0100-d293-11eb-80c0-96d7d03fad47.gif)
