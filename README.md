@@ -23,3 +23,7 @@
 6. Scroll Animation
 
 ![Scroll Animation](https://user-images.githubusercontent.com/78226946/122816354-d9bd0100-d293-11eb-80c0-96d7d03fad47.gif)
+
+7. Split Landing Page
+
+![Split Landing Page](https://user-images.githubusercontent.com/78226946/123531278-83e7bf00-d6c0-11eb-8eb7-902d6e5cb02e.gif)
