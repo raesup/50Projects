@@ -54,3 +54,11 @@ canvas {
 .toolbox > *:last-child {
   margin-left: auto;
 }
+
+.toolbox > *:focus {
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.98);
+}
