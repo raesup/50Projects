@@ -1,4 +1,12 @@
 const addBtn = document.getElementById("add");
+const notes = JSON.parse(localStorage.getItem("notes"));
+
+if (notes) {
+  //   for (let i = 0; i < notes.length; i++) {
+  //     addNewNote(notes[i]);
+  //   }
+  notes.forEach((note) => addNewNote(note));
+}
 
 addBtn.addEventListener("click", () => addNewNote());
 
@@ -26,6 +34,7 @@ function addNewNote(text = "") {
 
   deleteBtn.addEventListener("click", () => {
     note.remove();
+    updateLocalStorage();
   });
 
   editBtn.addEventListener("click", () => {
@@ -37,7 +46,23 @@ function addNewNote(text = "") {
     const { value } = e.target;
 
     main.innerHTML = marked(value);
+
+    updateLocalStorage();
   });
 
   document.body.appendChild(note);
+}
+
+// localStorage.setItem("name", "Raesup");
+// localStorage.getItem("name");
+// localStorage.removeItem("name");
+function updateLocalStorage() {
+  const notesText = document.querySelectorAll("textarea");
+
+  const notes = [];
+
+  notesText.forEach((note) => notes.push(note.value));
+
+  //   console.log(notes);
+  localStorage.setItem("notes", JSON.stringify(notes));
 }
